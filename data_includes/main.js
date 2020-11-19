@@ -2,7 +2,7 @@ PennController.ResetPrefix(null); //Initiates PennController
 var showProgressBar = false;
 //PennController.DebugOff()
 PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images/")
-PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG/main/images_fillers/")
+PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images_fillers/")
 
 Sequence( "setcounter", "information", "survey", "identification", "recording_information", "initRecorder", "instruction", "prac", "exp_start", "exp_block1", "rest", "exp_block2", "send", "final" )
 
