@@ -1,1 +1,9 @@
-null
+order,list,item,condition,target_num,comp_num,ambiguity,target,competitor,target ID,targetPos,compPos,comp2Pos,destPos,locPhrase,sentence,firstDisplay,secondDisplay,expTrials,target1,target2,target_type
+2,1,P3,,,,,,,,3,6,,4,,The corn below the man is on number 6.,P3_1.jpg,P3_2.jpg,N,"""Now it is on number 4.""","""Now the corn is on number 4.""",NA
+2,2,P3,,,,,,,,3,6,,4,,The corn below the man is on number 6.,P3_1.jpg,P3_2.jpg,N,"""Now it is on number 4.""","""Now the corn is on number 4.""",NA
+2,3,P3,,,,,,,,3,6,,4,,The corn below the man is on number 6.,P3_1.jpg,P3_2.jpg,N,"""Now it is on number 4.""","""Now the corn is on number 4.""",NA
+2,4,P3,,,,,,,,3,6,,4,,The corn below the man is on number 6.,P3_1.jpg,P3_2.jpg,N,"""Now it is on number 4.""","""Now the corn is on number 4.""",NA
+3,1,P2,,,,,,,,2,3,,1,,The grapes next to the monkey are on number 3.,P2_1.jpg,P2_2.jpg,N,"""Now they are on number 1.""","""Now the grapes are on number 1.""",NA
+3,2,P2,,,,,,,,2,3,,1,,The grapes next to the monkey are on number 3.,P2_1.jpg,P2_2.jpg,N,"""Now they are on number 1.""","""Now the grapes are on number 1.""",NA
+3,3,P2,,,,,,,,2,3,,1,,The grapes next to the monkey are on number 3.,P2_1.jpg,P2_2.jpg,N,"""Now they are on number 1.""","""Now the grapes are on number 1.""",NA
+3,4,P2,,,,,,,,2,3,,1,,The grapes next to the monkey are on number 3.,P2_1.jpg,P2_2.jpg,N,"""Now they are on number 1.""","""Now the grapes are on number 1.""",NA

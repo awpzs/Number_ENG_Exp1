@@ -167,7 +167,7 @@ newTrial("exp_start",
 Template(
     GetTable("fulldesign.csv")
         .setGroupColumn("list")
-        .filter(variable => variable.order < 45)
+        .filter(variable => variable.order < 44)
         , variable =>
         newTrial( "exp_block1" ,
             newMediaRecorder("recorder", "audio")
@@ -233,7 +233,7 @@ newTrial( "rest" ,
 Template(
     GetTable("fulldesign.csv")
         .setGroupColumn("list")
-        .filter(variable => variable.order > 44)
+        .filter(variable => variable.order > 43)
         , variable =>
         newTrial( "exp_block2" ,
             newMediaRecorder("recorder", "audio")
