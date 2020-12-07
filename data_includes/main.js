@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null); //Initiates PennController
 var showProgressBar = false;
-//PennController.DebugOff()
+PennController.DebugOff()
 PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images/")
 PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images_fillers/")
 
@@ -62,7 +62,7 @@ newTrial("recording_information" ,
         .wait()    
 )
 
-InitiateRecorder("https://langprolab.stir.ac/pcibex/index.php", "Please grant expt.pcibex.net access to your microphone.").label("initRecorder")
+InitiateRecorder("https://langprolab.stir.ac.uk/pcibex/index.php", "Please grant expt.pcibex.net access to your microphone.").label("initRecorder")
 
 Template(
     GetTable("instructions.csv")
