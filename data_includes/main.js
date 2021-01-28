@@ -90,6 +90,7 @@ Template(
                 .record()
             ,
             newText("inst_read", "<p>Please read the sentence aloud, then click on the sentence to proceed.</p>")
+                .bold()
                 .settings.center()
                 .print()
             ,
@@ -147,10 +148,10 @@ Template(
   .log( "Item" , variable.item )
   .log( "Condition" , variable.condition )
   .log( "ExpTrials" , variable.expTrials )
-  .log( "TargetType" , variable.target_type)
+//  .log( "TargetType" , variable.target_type)
   .log( "TargetNumber" , variable.target_num )
   .log( "CompetitorNumber" , variable.comp_num )
-  .log( "Ambiguity" , variable.ambiguity )
+//  .log( "Ambiguity" , variable.ambiguity )
   .log( "Sentence"  , variable.sentence )
   )
 
@@ -217,10 +218,10 @@ Template(
   .log( "Item" , variable.item )
   .log( "Condition" , variable.condition )
   .log( "ExpTrials" , variable.expTrials )
-  .log( "TargetType" , variable.target_type)
+//  .log( "TargetType" , variable.target_type)
   .log( "TargetNumber" , variable.target_num )
   .log( "CompetitorNumber" , variable.comp_num )
-  .log( "Ambiguity" , variable.ambiguity )
+//  .log( "Ambiguity" , variable.ambiguity )
   .log( "Sentence"  , variable.sentence )
   )
   
@@ -287,10 +288,10 @@ Template(
   .log( "Item" , variable.item )
   .log( "Condition" , variable.condition )
   .log( "ExpTrials" , variable.expTrials )
-  .log( "TargetType" , variable.target_type)
+//  .log( "TargetType" , variable.target_type)
   .log( "TargetNumber" , variable.target_num )
   .log( "CompetitorNumber" , variable.comp_num )
-  .log( "Ambiguity" , variable.ambiguity )
+//  .log( "Ambiguity" , variable.ambiguity )
   .log( "Sentence"  , variable.sentence )
   )
 
