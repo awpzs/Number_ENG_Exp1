@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null); //Initiates PennController
 var showProgressBar = false;
-PennController.DebugOff()
+//PennController.DebugOff()
 PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images/")
 PennController.AddHost("https://raw.githubusercontent.com/awpzs/Number_ENG_Exp1/main/images_fillers/")
 
@@ -33,7 +33,7 @@ newTrial( "survey" ,
 .log( "ID", PennController.GetURLParameter("id") )
 
 newTrial( "identification" ,
-    newText("<p>Below is your Prolific ID for this experiment.</p><p>Please take a note of it in case you need it as a reference.</p><p>Press <strong>Continue</strong> to proceed.</p>")
+    newText("<p>Below is your unique ID for this experiment.</p><p>Please take a note of it in case you need it as a reference.</p><p>Press <strong>Continue</strong> to proceed.</p>")
         .print()
     ,
     newTextInput("inputID", GetURLParameter("id"))
@@ -62,12 +62,12 @@ newTrial("recording_information" ,
         .wait()    
 )
 
-InitiateRecorder("https://langprolab.stir.ac.uk/pcibex/index.php", "Please grant expt.pcibex.net access to your microphone.").label("initRecorder")
+InitiateRecorder("https://langprolab.stir.ac/pcibex/index.php", "Please grant expt.pcibex.net access to your microphone.").label("initRecorder")
 
 Template(
     GetTable("instructions.csv")
         .setGroupColumn("list")
-        ,variable =>
+        , variable =>
     newTrial( "instruction" ,
         newHtml("information", variable.insPage)
             .print()
@@ -83,7 +83,8 @@ Template(
 
 Template(
     GetTable("prac.csv")
-        .setGroupColumn("list"), variable =>
+        .setGroupColumn("list")
+        , variable =>
         newTrial( "prac" ,
             newMediaRecorder("recorder", "audio")
                 .record()
@@ -109,18 +110,14 @@ Template(
             ,
             clear()
             ,
-            newText("<p>In this example, you could say:</p>")
+            newText("In this example, you could say:&nbsp;").bold()
+                .settings.after(newText(variable.target1).bold().color("blue"))
+                .settings.after(newText("&nbsp;OR&nbsp;").bold())
+                .settings.after(newText(variable.target2).bold().color("blue"))
                 .settings.center()
                 .print()
             ,
-            newText(variable.target1)
-                .bold()
-                .settings.after(newText("&nbsp;OR&nbsp;"))
-                .settings.after(newText(variable.target2).bold())
-                .settings.center()
-                .print()
-            ,
-            newText("<p>Feel free to vary your expressions.</p>")
+            newText("<p>Choose referring expressions depending on situations.</p>").bold().color("blue")
                 .settings.center()
                 .print()
             ,
@@ -133,6 +130,10 @@ Template(
             newButton("Proceed")
                 .settings.center()
                 .print()
+                .wait()
+            ,
+            newTimer("wait", 500)
+                .start()
                 .wait()
             ,
             getMediaRecorder("recorder")
@@ -201,6 +202,10 @@ Template(
                 .print()
                 .wait()
             ,
+            newTimer("wait", 500)
+                .start()
+                .wait()
+            ,
             getMediaRecorder("recorder")
                 .stop()
             ,
@@ -267,6 +272,10 @@ Template(
                 .print()
                 .wait()
             ,
+            newTimer("wait", 500)
+                .start()
+                .wait()
+            ,
             getMediaRecorder("recorder")
                 .stop()
             ,
@@ -294,11 +303,11 @@ newTrial( "final"
         .settings.center()
         .print()
     ,
-    newText("<p>If you were asked to download a copy of the recordings on the last page, please send the file and your Prolific ID to <strong>shi.zhang[at]stir.ac.uk.</strong></p><p>Otherwise, please click on the link below to validate your participation.</p>")
+    newText("<p>If you were asked to download a copy of the recordings on the last page, please send the file and your unique ID to <strong>kumiko.fukumura[at]stir.ac.uk.</strong></p><p>Otherwise, please click on the link below to validate your participation.</p>")
         .settings.center()
         .print()
     ,
-    newText("<p><a href='https://app.prolific.co/submissions/complete?cc=30CBCF4D' href='_blank'>Click here to validate your participation and finish the experiment</a></p>")
+    newText("<p><a href='https://stirling.sona-systems.com/webstudy_credit.aspx?experiment_id=1903&credit_token=73dbad39838a446598271bf8fdf6da8b&survey_code="+GetURLParameter("id")+"' href='_blank'>Click here to validate your participation and finish the experiment</a></p>")
         .settings.center()
         .print()
     ,
